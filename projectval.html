@@ -3,30 +3,29 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title> Profile Validation </title>
-<script type ="text/javascript" src = "./val.js"></script>
+<script type ="text/javascript" src = "./projectval.js"></script>
 <link rel="stylesheet" type="text/css" href="">
 </head>
 
 <body>
 <h1> Username Form</h1>
-<form id = "textForm" method = "post"
- onsubmit = "return validate();" >
+<form id = "textForm" method = "post"action = "./registration.php" >
 <table >
 <tr>
 <td> <p>Username: </p> </td>
-<td> <input type = "text" name = "userName" /></td>
+<td> <input type = "text" name = "userName" onchange="validateu();" /></td>
 </tr>
 <tr>
 <td> <p>Email: </p> </td>
-<td> <input type = "text" name = "eMail" /></td>
+<td> <input type = "email" name = "eMail" onchange="validatee();"/></td>
 </tr>
 <tr>
 <td><p> Password: </p></td>
-<td> <input type = "text" name = "pswd" /></td>
+<td> <input type = "Password" name = "pswd" /></td>
 </tr>
 <tr>
 <td> <p>Repeat Password: </p> </td>
-<td> <input type = "text" name = "repeat" /></td>
+<td> <input type = "password" name = "repeat" onchange="validatep();" /></td>
 </tr>
 <tr>
 <td> <input type = "submit" value = "Enter" /></td>
